@@ -3,7 +3,11 @@
   <div class="cover">
     <div class="cover-inner">
       <div class="cover-contents">
-        <a href="" class="btn btn-success bt-lg">ムービーリストを始める</a>
+        <% unless logged_in? %>
+      
+          <%= link_to 'ムービーリストを始める', signup_path, class: 'btn btn-success btn-lg' %>
+          
+        <% end %>
       </div>
     </div>
   </div>
