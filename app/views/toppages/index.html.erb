@@ -1,11 +1,18 @@
 <% content_for :cover do %>
   
-  <div class="cover">
+  <div class="center jumbotron">
     <div class="cover-inner">
       <div class="cover-contents">
         <% unless logged_in? %>
       
-          <%= link_to 'ムービーリストを始める', signup_path, class: 'btn btn-success btn-lg' %>
+          <div class="text-center">      
+            <%= link_to 'ムービーリストを始める', signup_path, class: 'btn btn-primary ' %>
+          </div>
+          
+        <% else %>
+          <div class="text-center">
+            <h1>Welcome to the Movielist</h1>
+          </div>
           
         <% end %>
       </div>

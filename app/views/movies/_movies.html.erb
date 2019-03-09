@@ -1,0 +1,23 @@
+<% if movies %>
+
+  <div class="row">
+    
+    <% movies.each do |movie| %>
+      
+      <div class="movie">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-heading text-center">
+              <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2<%= movie.image_url %>" alt="">
+            </div>
+            
+            <div class="panel-body">
+              <p class="movie-title"><%= movie.name %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>
+<% end %>
