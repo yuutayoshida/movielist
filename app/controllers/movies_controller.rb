@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
         @movies << movie
       end
     end
+    
+   
   end
   
   private

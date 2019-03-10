@@ -12,12 +12,14 @@
             </div>
             
             <div class="panel-body">
-              <p class="movie-title"><%= movie.name %></p>
-              <div class="buttons text-center">
-                <% if logged_in? %>
-                  <%= render 'ownerships/watched_button', movie: movie %>
-                <% end %>
-              </div>
+              
+                <p class="movie-title"><%= movie.name %></p>
+              
+                <div class="buttons text-center">
+                  <% if logged_in? %>
+                    <%= render 'ownerships/watched_button', movie: movie %>
+                  <% end %>
+                </div>
             </div>
           </div>
         </div>
