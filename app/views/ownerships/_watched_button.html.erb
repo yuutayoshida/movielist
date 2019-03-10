@@ -1,0 +1,17 @@
+<% if current_user.watched?(movie) %>
+
+  <%= form_tag(ownership_path(movie.id), method: :delete) do %>
+    <%= hidden_field_tag :movie_id, movie.id %>
+    <%= hidden_field_tag :type, 'Watched' %>
+    <%= submit_tag 'Unwatched', class: 'btn btn-success' %>
+  <% end %>
+  
+<% else %>
+
+  <%= form_tag(ownerships_path) do %>
+    <%= hidden_field_tag :movie_code, movie.code %>
+    <%= hidden_field_tag :type, 'Watched' %>
+    <%= submit_tag 'Watched it', class: 'btn btn-primary' %>
+  <% end %>
+  
+<% end %>

@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
       )
       
       results.results.each do |result|
-        movie = Movie.new(read(result))
+        movie = Movie.find_or_initialize_by(read(result))
         @movies << movie
       end
     end
