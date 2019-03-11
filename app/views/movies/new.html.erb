@@ -4,8 +4,8 @@
       
       <%= form_tag(new_movie_path, method: :get, class: 'form-inline') do %>
       
-         <div class="form-group">
-           <%= text_field_tag :keyword, @keyword, class: 'form-control input-lg', placeholder: "キーワードを入力", size: 40 %>
+         <div class="form-group",class="col-sm-offset-2 col-sm-8">
+           <%= text_field_tag :keyword, @keyword, class: 'form-control', placeholder: "キーワードを入力", size: 40 %>
          </div>
          
          <%= submit_tag '検索', class: 'btn btn-success btn-lg' %>

@@ -18,6 +18,11 @@ class MoviesController < ApplicationController
    
   end
   
+  def show
+    @movie = Movie.find(params[:id])
+    @watched_users = @movie.watched_users
+  end
+  
   private
   
   def read(result)

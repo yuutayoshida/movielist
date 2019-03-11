@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-3 col-sm-6 col-xs-12 col-md-offset-3">
+    <div class="movie">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2<%= @movie.image_url %>" alt="">
+        </div>
+        <div class="panel-body">
+          <p class="movie-title"><%= @movie.name %></p>
+          <div class="buttons text-center">
+            <%= render 'ownerships/watched_button', movie: @movie %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-3 col-sm-6 col-xs-12">
+    <div class="watched-users">
+      <div class="panel panel-default">
+        <div class="panel-heading text-center">
+          WatchedUser
+        </div>
+        <div class="panel-body">
+          <% @watched_users.each do |user| %>
+            <%= link_to user.name, user_path(user) %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
